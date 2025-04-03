@@ -17,12 +17,19 @@
     </style>
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Já me livrei da maldição!!</p>
+    <h1>Iniciando estudos Dom</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
 
     <script>
-        var nome = window.prompt("Qual o seu nome?");
-        window.alert("Olá, " + nome + "!");
+        /* window.document.write(window.navigator.appName) */
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[0]
+        document.write(`Está escrito assim: ` + p1.innerText)
+        corpo.style.background = 'pink'
+        p1.style.color = 'blue'
+        
     </script>
 </body>
 </html>
