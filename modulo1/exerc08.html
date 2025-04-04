@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Você é brasileiro ou estrangeiro?</h1>
+    Informe seu país de origem: <input type="text" id="txtNacionalidade">
+    <input type="button" value="Informar" onclick="nacionalidade()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function nacionalidade() {
+            var txtnasc = document.querySelector('input#txtNacionalidade');
+            var res = document.getElementById('res');
+            var pais = txtnasc.value;
+            res.innerHTML = `País: ${pais}. </br>`
+            if (pais.toLowerCase() == 'brasil') {
+                res.innerHTML += `<p>Você é <strong>brasileiro</strong>!</p>`
+            } else {
+                res.innerHTML += `Você é <strong>estrangeiro</strong>!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
